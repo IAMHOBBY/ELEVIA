@@ -10,7 +10,7 @@ app.use(static(path.join(__dirname, '/')));
 app.set('port', process.env.PORT || 8080);
 // 서버를 동작했을 때 처음으로 보여줄 페이지
 app.get('/', function (req, res) {
-  res.redirect('./src/index.html');
+  res.redirect('/index.html');
 });
 
 http.createServer(app).listen(app.get('port'), function () {
