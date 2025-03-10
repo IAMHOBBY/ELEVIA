@@ -6,13 +6,12 @@ footer {
   background-color: white;
 }
 
-/* 0309 이준 수정 start */
 #main-nav {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 120px;
+  width: 100vw;
+  height: 80px;
   background-color: rgba(255, 255, 255, 0); /* 초기 완전 투명 */
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0);
   display: flex;
@@ -23,12 +22,16 @@ footer {
   transition: background-color 0.3s ease, box-shadow 0.3s ease; /* 부드러운 변화 */
 }
 
+.nav-text {
+  color: whitesmoke;
+  font-family: 'Playfair Display';
+}
+
 /* 네비게이션 바가 보일 때 */
 .nav-visible {
   background-color: rgba(255, 255, 255, 0.5) !important;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 }
-/* 0309 이준 수정 end */
 
 /* 0309 이준 추가 start */
 .font-logo {
@@ -102,29 +105,42 @@ footer {
   -webkit-transform: rotate(45deg);
 }
 
+.center-text,
+.center-small-text {
+  position: relative; /* overlay 위로 배치되도록 설정 */
+  z-index: 1; /* 오버레이보다 위에 표시되도록 설정 */
+  text-align: center;
+}
+
 /*추가*/
 .center-text {
+  padding-top: 13%;
   text-align: center;
-  background-color: black;
   color: white;
   font-weight: bold;
   font-size: 50px;
   font-family: 'Spoqa Han Sans';
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* 텍스트 가독성을 위한 그림자 */
 }
 .center-small-text {
   padding-top: 5%;
   text-align: center;
-  background-color: black;
   color: white;
   font-size: 20px;
   font-family: 'Spoqa Han Sans';
   letter-spacing: 3px;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
 }
 #main-section0 {
-  padding-top: 200px;
-  background-color: black;
-  height: 80vh;
+  position: relative;
+  height: 100vh; /* 화면 높이에 맞춤 */
+  width: 100%;
   font-family: 'GmarketSans';
+
+  background-image: url('../images/background/image5.jpg');
+  background-size: cover; /* 요소 크기에 맞게 배경 이미지 조정 */
+  background-position: center; /* 이미지 중앙 정렬 */
+  background-repeat: no-repeat; /* 이미지 반복 방지 */
 }
 
 /*여기까지*/
@@ -221,7 +237,14 @@ footer {
   background: rgba(0, 0, 0, 0.5); /* 회색 투명 효과 */
 }
 
-.bold-white-text {
+.overlay2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2); /* 회색 투명 효과 */
+}
+
+bold-white-text {
   color: white;
   position: absolute;
   top: 50%;
@@ -231,7 +254,7 @@ footer {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 15px;
-  font-family: 'Satisfy';
+  font-family: 'Playfair Display';
 }
 
 .bold-white-text2 {
@@ -244,17 +267,18 @@ footer {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 15px;
-  font-family: 'Satisfy';
+  font-family: 'Playfair Display';
 }
 
 .highlighted-word {
   color: #ffff99;
   font-size: 22px;
-  font-family: 'Satisfy';
+  font-family: 'Playfair Display';
 }
 
 .highlighted {
   color: #ffff99;
+  font-weight: bold;
 }
 
 .aside-menu,
