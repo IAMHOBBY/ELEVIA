@@ -106,7 +106,9 @@ footer {
 }
 
 .center-text,
-.center-small-text {
+.center-small-text,
+.main-section-explanation,
+.wrapper {
   position: relative; /* overlay 위로 배치되도록 설정 */
   z-index: 1; /* 오버레이보다 위에 표시되도록 설정 */
   text-align: center;
@@ -119,7 +121,7 @@ footer {
   color: white;
   font-weight: bold;
   font-size: 50px;
-  font-family: 'Spoqa Han Sans';
+  font-family : 'Merriweather', serif;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* 텍스트 가독성을 위한 그림자 */
 }
 .center-small-text {
@@ -127,9 +129,17 @@ footer {
   text-align: center;
   color: white;
   font-size: 20px;
-  font-family: 'Spoqa Han Sans';
+  font-weight: bold;
+  font-family: 'Gowun Dodum', sans-serif;
   letter-spacing: 3px;
   text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+}
+
+.black-text{
+  text-align: center;
+  color: black;
+  font-weight: 300;
+  font-family: 'Gowun Dodum', sans-serif;
 }
 #main-section0 {
   position: relative;
@@ -146,14 +156,25 @@ footer {
 /*여기까지*/
 
 #main-section1 {
+  position: relative;
+  height: 100vh; /* 화면 높이에 맞춤 */
+  width: 100%;
+  font-family: 'GmarketSans';
+  font-weight: bolder;
+  color: white;
+  background-image: url('../images/background/image6.jpg');
+  background-size: cover; /* 요소 크기에 맞게 배경 이미지 조정 */
+  background-position: center; /* 이미지 중앙 정렬 */
+  background-repeat: no-repeat; /* 이미지 반복 방지 */
   background-color: white;
   height: 100vh;
 }
 
 #main-section2 {
-  background-color: rgba(254, 253, 253, 0.95);
+  background-color: white;
   height: 100vh;
 }
+
 
 .main-section-explanation {
   font-size: 35px;
@@ -162,8 +183,7 @@ footer {
   align-items: center;
   padding-top: 10%;
   margin-bottom: 2%;
-  font-family: 'Aharoni', 'NanumSquare', 'Apple SD Gothic Neo', 'Malgun Gothic',
-    'Nanum Gothic', 'Noto Sans', 'sans-serif';
+  font-family: 'Gowun Dodum', sans-serif;
 }
 
 /*여기 추가함*/
@@ -241,10 +261,10 @@ footer {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.2); /* 회색 투명 효과 */
+  background: rgba(0, 0, 0, 0.5); /* 회색 투명 효과 */
 }
 
-bold-white-text {
+.bold-white-text {
   color: white;
   position: absolute;
   top: 50%;
@@ -273,12 +293,19 @@ bold-white-text {
 .highlighted-word {
   color: #ffff99;
   font-size: 22px;
-  font-family: 'Playfair Display';
+}
+
+.highlighted-word2 {
+  color: #ffff99;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: 'Gowun Dodum', sans-serif;
 }
 
 .highlighted {
   color: #ffff99;
   font-weight: bold;
+  font-family : 'Merriweather', serif;
 }
 
 .aside-menu,
