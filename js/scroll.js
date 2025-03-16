@@ -180,12 +180,16 @@ document.addEventListener('DOMContentLoaded', function () {
 // ############################################# 네비게이션 바 #############################################
 document.addEventListener('DOMContentLoaded', function () {
   const nav = document.getElementById('main-nav');
+  const navText = document.querySelector('.nav-text');
 
   window.addEventListener('scroll', function () {
     if (window.scrollY > 50) {
       nav.classList.add('nav-visible'); // 스크롤 내리면 배경색 추가
+      const navText = document.querySelector('.nav-text');
+      navText.style.color = 'black';
     } else {
       nav.classList.remove('nav-visible'); // 최상단에서는 투명
+      navText.style.color = 'whitesmoke';
     }
   });
 });
