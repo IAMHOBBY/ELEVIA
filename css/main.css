@@ -121,17 +121,16 @@ footer {
   font-weight: bold;
   font-size: 50px;
   font-family: 'Merriweather', serif;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* 텍스트 가독성을 위한 그림자 */
 }
 .center-small-text {
   padding-top: 5%;
   text-align: center;
   color: white;
-  font-size: 25px;
+  font-size: 22px;
   font-weight: bold;
   font-family: 'Gowun Dodum', sans-serif;
   letter-spacing: 3px;
-  /* text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5); */
+  /* text-shadow: 1px 1phighlighted-word2x 6px rgba(0, 0, 0, 0.5); */
 }
 
 .black-text {
@@ -198,7 +197,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
   font-family: 'Gowun Dodum', sans-serif;
 }
 
@@ -313,7 +312,7 @@ footer {
 
 .highlighted-word2 {
   color: #ffff99;
-  font-size: 25px;
+  font-size: 22px;
   font-weight: bold;
   font-family: 'Gowun Dodum', sans-serif;
 }
