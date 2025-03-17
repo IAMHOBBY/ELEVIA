@@ -196,6 +196,14 @@
                 스타일을 선보입니다.
               </p>
             </div>
+            <div class="container-creator">
+              <div class="image">
+                <img src="./images/creator/creator6.png" alt="이미지" />
+              </div>
+              <p class="creator-name">Jeong</p>
+              <p class="artist">Inner Beauty</p>
+              <p class="creator-text"><br /><br /></p>
+            </div>
           </div>
         </div>
         <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
@@ -213,6 +221,19 @@
         <a href="#apply" class="apply-btn">지원하기</a>
       </article>
     </section>
+
+    <!-- 모달 -->
+    <div id="creatorModal" class="modal">
+      <div class="modal-container">
+        <span class="close">&times;</span>
+        <div class="image">
+          <img id="modal-image" src="" alt="크리에이터 이미지" />
+        </div>
+        <p class="creator-name" id="modal-name"></p>
+        <p class="artist" id="modal-job"></p>
+        <p class="creator-text" id="modal-description"></p>
+      </div>
+    </div>
 
     <!-- ----- 공통 footer ----- -->
     <footer id="footer-section">
@@ -266,5 +287,46 @@
     } else if (endX - startX > 50) {
       moveSlide(-1); // 왼쪽으로 넘기기
     }
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('creatorModal');
+    const modalImage = document.getElementById('modal-image');
+    const modalName = document.getElementById('modal-name');
+    const modalJob = document.getElementById('modal-job');
+    const modalDescription = document.getElementById('modal-description');
+    const closeModal = document.querySelector('.close');
+
+    // 모든 .container-creator 요소 가져오기
+    const creators = document.querySelectorAll('.container-creator');
+
+    // 각 크리에이터 클릭 이벤트 추가
+    creators.forEach((creator) => {
+      creator.addEventListener('click', function () {
+        const imageSrc = this.querySelector('.image img').src;
+        const name = this.querySelector('.creator-name').textContent;
+        const job = this.querySelector('.artist').textContent;
+        const description = this.querySelector('.creator-text').textContent;
+
+        modalImage.src = imageSrc;
+        modalName.textContent = name;
+        modalJob.textContent = job;
+        modalDescription.textContent = description;
+
+        modal.style.display = 'flex'; // 모달 표시
+      });
+    });
+
+    // 닫기 버튼 클릭 시 모달 닫기
+    closeModal.addEventListener('click', function () {
+      modal.style.display = 'none';
+    });
+
+    // 모달 바깥 클릭 시 닫기
+    window.addEventListener('click', function (event) {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
   });
 </script>
