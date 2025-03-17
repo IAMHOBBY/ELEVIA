@@ -455,11 +455,12 @@ footer {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  color: whitesmoke;
   border: none;
   cursor: pointer;
   padding: 10px;
+  font-size: 50px;
 }
 
 .prev {
@@ -647,7 +648,7 @@ body {
   animation: fadeIn 0.3s ease-in-out;
 
   width: 414px;
-  height: 810px;
+  height: 780px;
 }
 
 /* 닫기 버튼 */
@@ -660,7 +661,7 @@ body {
 }
 
 .modal-container .creator-name {
-  font-size: 100px; /* 더 큰 제목 크기 */
+  font-size: 80px; /* 더 큰 제목 크기 */
   color: #444; /* 텍스트 색상 조정 (어두운 회색) */
   font-family: 'Gowun Dodum', sans-serif;
 }

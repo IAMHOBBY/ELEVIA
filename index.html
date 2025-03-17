@@ -223,9 +223,9 @@
     </section>
 
     <!-- 모달 -->
-    <div id="creatorModal" class="modal">
-      <div class="modal-container">
-        <span class="close">&times;</span>
+    <div id="creatorModal" class="modal" onclick="closeModal()">
+      <div class="modal-container" onclick="event.stopPropagation()">
+        <span class="close" onclick="closeModal()">&times;</span>
         <div class="image">
           <img id="modal-image" src="" alt="크리에이터 이미지" />
         </div>
@@ -255,8 +255,6 @@
   let currentIndex = 0;
   const slides = document.querySelectorAll('.slide-creator');
   const slider = document.querySelector('.slider');
-  let startX = 0;
-  let endX = 0;
 
   // 슬라이드 이동 함수
   function moveSlide(step) {
@@ -269,25 +267,6 @@
 
     slider.style.transform = `translateX(${-currentIndex * 100}%)`;
   }
-
-  // 터치 시작 이벤트 (모바일 스와이프)
-  slider.addEventListener('touchstart', (e) => {
-    startX = e.touches[0].clientX;
-  });
-
-  // 터치 이동 이벤트 (모바일 스와이프)
-  slider.addEventListener('touchmove', (e) => {
-    endX = e.touches[0].clientX;
-  });
-
-  // 터치 끝났을 때 슬라이드 방향 결정
-  slider.addEventListener('touchend', () => {
-    if (startX - endX > 50) {
-      moveSlide(1); // 오른쪽으로 넘기기
-    } else if (endX - startX > 50) {
-      moveSlide(-1); // 왼쪽으로 넘기기
-    }
-  });
 
   document.addEventListener('DOMContentLoaded', function () {
     const modal = document.getElementById('creatorModal');
@@ -329,4 +308,12 @@
       }
     });
   });
+
+  function closeModal() {
+    document.querySelector('.modal').style.display = 'none';
+  }
+
+  function openModal() {
+    document.querySelector('.modal').style.display = 'flex';
+  }
 </script>
